@@ -1,0 +1,580 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background: #f7fbff;
+  color: #101828;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+
+/* NAVBAR */
+
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 75px;
+  padding: 0 7%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: rgba(255,255,255,.94);
+  backdrop-filter: blur(15px);
+  border-bottom: 1px solid #dcecff;
+  z-index: 999;
+}
+
+.logo,
+.footer-logo {
+  font-family: "Orbitron", sans-serif;
+  font-weight: 900;
+  font-size: 21px;
+}
+
+.logo span,
+.footer-logo span {
+  color: #087cff;
+  margin-left: 5px;
+}
+
+.navbar nav {
+  display: flex;
+  gap: 28px;
+}
+
+.navbar nav a {
+  font-size: 13px;
+  font-weight: 600;
+  color: #344054;
+}
+
+.navbar nav a:hover {
+  color: #087cff;
+}
+
+.nav-btn {
+  background: #087cff;
+  color: white;
+  padding: 11px 20px;
+  border-radius: 8px;
+  font-size: 12px;
+  font-weight: 700;
+  box-shadow: 0 8px 25px rgba(8,124,255,.25);
+}
+
+.menu-btn {
+  display: none;
+  border: 0;
+  background: none;
+  font-size: 25px;
+}
+
+
+/* HERO */
+
+.hero {
+  min-height: 100vh;
+  padding: 150px 8% 100px;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  background:
+    radial-gradient(circle at 85% 40%, rgba(255,255,255,.25), transparent 25%),
+    linear-gradient(135deg, #006eff, #0b45b5);
+  color: white;
+}
+
+.hero-content {
+  max-width: 750px;
+  position: relative;
+  z-index: 2;
+}
+
+.hero-badge {
+  display: inline-block;
+  border: 1px solid rgba(255,255,255,.6);
+  padding: 8px 15px;
+  border-radius: 30px;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  margin-bottom: 25px;
+}
+
+.hero h1 {
+  font-family: "Orbitron", sans-serif;
+  font-size: clamp(45px, 8vw, 90px);
+  line-height: 1;
+}
+
+.hero h1 span {
+  display: block;
+  color: white;
+}
+
+.hero p {
+  max-width: 620px;
+  margin-top: 25px;
+  line-height: 1.8;
+  color: #eaf4ff;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 12px;
+  margin-top: 35px;
+  flex-wrap: wrap;
+}
+
+.btn-primary,
+.btn-secondary {
+  padding: 15px 23px;
+  border-radius: 8px;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.btn-primary {
+  background: white;
+  color: #087cff;
+}
+
+.btn-secondary {
+  border: 1px solid white;
+  color: white;
+}
+
+.btn-primary:hover,
+.btn-secondary:hover {
+  transform: translateY(-3px);
+}
+
+.hero-decoration .circle {
+  position: absolute;
+  width: 500px;
+  height: 500px;
+  border-radius: 50%;
+  border: 60px solid rgba(255,255,255,.08);
+  right: -150px;
+  top: 20%;
+}
+
+.circle-small {
+  position: absolute;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  border: 25px solid rgba(255,255,255,.1);
+  right: 25%;
+  bottom: 10%;
+}
+
+
+/* SECTION */
+
+.section {
+  padding: 100px 8%;
+}
+
+.section-header {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.section-header small {
+  color: #087cff;
+  font-weight: 800;
+  letter-spacing: 3px;
+  font-size: 10px;
+}
+
+.section-header h2 {
+  font-family: "Orbitron";
+  font-size: clamp(28px, 5vw, 48px);
+  margin: 8px 0;
+}
+
+.section-header p {
+  color: #667085;
+}
+
+
+/* GAME */
+
+.game-grid {
+  max-width: 1100px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.game-card {
+  padding: 28px;
+  background: white;
+  border: 1px solid #dcecff;
+  border-radius: 15px;
+  box-shadow: 0 10px 35px rgba(10,80,160,.06);
+  transition: .3s;
+}
+
+.game-card:hover {
+  transform: translateY(-7px);
+  border-color: #087cff;
+  box-shadow: 0 15px 40px rgba(8,124,255,.15);
+}
+
+.game-icon {
+  width: 65px;
+  height: 65px;
+  display: grid;
+  place-items: center;
+  background: linear-gradient(135deg,#087cff,#004fc4);
+  color: white;
+  border-radius: 15px;
+  font-family: "Orbitron";
+  font-weight: 900;
+  margin-bottom: 20px;
+}
+
+.game-card h3 {
+  font-size: 17px;
+}
+
+.game-card p {
+  color: #98a2b3;
+  font-size: 12px;
+  margin: 5px 0 20px;
+}
+
+.game-card button {
+  width: 100%;
+  padding: 12px;
+  border: 0;
+  background: #087cff;
+  color: white;
+  border-radius: 7px;
+  font-weight: 700;
+}
+
+
+/* TOP UP */
+
+.topup-section {
+  background: #edf6ff;
+}
+
+.topup-box {
+  max-width: 650px;
+  margin: auto;
+  padding: 35px;
+  background: white;
+  border-radius: 18px;
+  box-shadow: 0 15px 50px rgba(0,80,160,.1);
+}
+
+.topup-box label {
+  display: block;
+  margin: 18px 0 8px;
+  font-size: 11px;
+  font-weight: 800;
+  color: #344054;
+}
+
+.topup-box input,
+.topup-box select {
+  width: 100%;
+  padding: 14px;
+  border: 1px solid #cfe2f7;
+  border-radius: 8px;
+  outline: none;
+  font-family: inherit;
+}
+
+.topup-box input:focus,
+.topup-box select:focus {
+  border-color: #087cff;
+}
+
+.nominal-grid {
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  gap: 10px;
+}
+
+.nominal-grid button {
+  padding: 13px 5px;
+  background: white;
+  border: 1px solid #b9d8fa;
+  color: #087cff;
+  border-radius: 7px;
+  font-weight: 700;
+}
+
+.nominal-grid button:hover {
+  background: #087cff;
+  color: white;
+}
+
+.order-btn {
+  width: 100%;
+  margin-top: 25px;
+  padding: 15px;
+  border: 0;
+  background: #087cff;
+  color: white;
+  border-radius: 8px;
+  font-weight: 800;
+}
+
+
+/* PROMO */
+
+.promo-section {
+  background: white;
+}
+
+.promo-grid {
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  gap: 20px;
+}
+
+.promo-card {
+  padding: 35px;
+  border-radius: 15px;
+  background: linear-gradient(135deg,#087cff,#0b51c8);
+  color: white;
+}
+
+.promo-card span {
+  font-size: 10px;
+  background: white;
+  color: #087cff;
+  padding: 5px 10px;
+  border-radius: 20px;
+  font-weight: 800;
+}
+
+.promo-card h3 {
+  font-family: "Orbitron";
+  margin: 25px 0 10px;
+}
+
+.promo-card p {
+  color: #e4f1ff;
+  font-size: 12px;
+  line-height: 1.7;
+}
+
+
+/* STEPS */
+
+.steps {
+  max-width: 1100px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+  gap: 20px;
+}
+
+.step {
+  padding: 30px;
+  background: white;
+  border: 1px solid #dcecff;
+  border-radius: 14px;
+}
+
+.step strong {
+  font-family: "Orbitron";
+  color: #087cff;
+  font-size: 25px;
+}
+
+.step h3 {
+  margin: 20px 0 10px;
+  font-size: 14px;
+}
+
+.step p {
+  color: #667085;
+  font-size: 12px;
+  line-height: 1.7;
+}
+
+
+/* CONTACT */
+
+.contact {
+  padding: 100px 8%;
+  background: linear-gradient(135deg,#006eff,#0a49b7);
+}
+
+.contact-box {
+  max-width: 750px;
+  margin: auto;
+  text-align: center;
+  color: white;
+}
+
+.contact-box small {
+  letter-spacing: 3px;
+}
+
+.contact-box h2 {
+  font-family: "Orbitron";
+  font-size: clamp(30px,5vw,55px);
+  margin: 10px 0;
+}
+
+.contact-box p {
+  color: #dcecff;
+  margin-bottom: 30px;
+}
+
+.whatsapp-btn,
+.channel-btn {
+  display: inline-block;
+  padding: 14px 20px;
+  margin: 5px;
+  border-radius: 8px;
+  font-size: 11px;
+  font-weight: 800;
+}
+
+.whatsapp-btn {
+  background: white;
+  color: #087cff;
+}
+
+.channel-btn {
+  border: 1px solid white;
+  color: white;
+}
+
+
+/* FOOTER */
+
+footer {
+  padding: 60px 8%;
+  text-align: center;
+  background: #07101d;
+  color: white;
+}
+
+.footer-logo {
+  color: white;
+}
+
+footer > p {
+  color: #8ea7c2;
+  font-size: 10px;
+  letter-spacing: 2px;
+  margin: 15px 0 25px;
+}
+
+.footer-links {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  margin-bottom: 25px;
+  font-size: 11px;
+  color: #b9cbe0;
+}
+
+
+/* FLOATING WA */
+
+.floating-wa {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  width: 58px;
+  height: 58px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  background: #087cff;
+  color: white;
+  font-weight: 900;
+  font-size: 12px;
+  box-shadow: 0 8px 30px rgba(8,124,255,.4);
+  z-index: 100;
+}
+
+
+/* MOBILE */
+
+@media(max-width:768px) {
+
+  .navbar {
+    padding: 0 5%;
+  }
+
+  .navbar nav {
+    display: none;
+    position: absolute;
+    top: 75px;
+    left: 0;
+    width: 100%;
+    padding: 25px;
+    flex-direction: column;
+    text-align: center;
+    background: white;
+    border-bottom: 1px solid #dcecff;
+  }
+
+  .navbar nav.active {
+    display: flex;
+  }
+
+  .nav-btn {
+    display: none;
+  }
+
+  .menu-btn {
+    display: block;
+  }
+
+  .hero {
+    padding: 130px 6% 90px;
+  }
+
+  .hero h1 {
+    font-size: 45px;
+  }
+
+  .section {
+    padding: 75px 6%;
+  }
+
+  .game-grid,
+  .promo-grid,
+  .steps {
+    grid-template-columns: 1fr;
+  }
+
+  .nominal-grid {
+    grid-template-columns: repeat(2,1fr);
+  }
+
+  .topup-box {
+    padding: 25px;
+  }
+
+}

@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>PANOWZ TOPUP</title>
+
+  <link rel="stylesheet" href="style.css">
+
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600;700;800;900&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+  <!-- NAVBAR -->
+  <header class="navbar">
+    <div class="logo">
+      PANOWZ<span>TOPUP</span>
+    </div>
+
+    <nav id="navMenu">
+      <a href="#home">Home</a>
+      <a href="#games">Game</a>
+      <a href="#promo">Promo</a>
+      <a href="#cara">Cara Beli</a>
+      <a href="#contact">Bantuan</a>
+    </nav>
+
+    <a href="#games" class="nav-btn">TOP UP</a>
+
+    <button class="menu-btn" onclick="toggleMenu()">☰</button>
+  </header>
+
+
+  <!-- HERO -->
+  <section id="home" class="hero">
+
+    <div class="hero-content">
+
+      <div class="hero-badge">
+        ⚡ PANOWZ DIGITAL STORE
+      </div>
+
+      <h1>
+        TOP UP GAME
+        <span>CEPAT & AMAN</span>
+      </h1>
+
+      <p>
+        Isi ulang game favoritmu dengan mudah,
+        cepat, dan praktis bersama PANOWZ TOPUP.
+      </p>
+
+      <div class="hero-buttons">
+        <a href="#games" class="btn-primary">
+          TOP UP SEKARANG →
+        </a>
+
+        <a href="#cara" class="btn-secondary">
+          CARA BELI
+        </a>
+      </div>
+
+    </div>
+
+    <div class="hero-decoration">
+      <div class="circle"></div>
+      <div class="circle-small"></div>
+    </div>
+
+  </section>
+
+
+  <!-- GAME -->
+  <section id="games" class="section">
+
+    <div class="section-header">
+      <small>GAME FAVORIT</small>
+      <h2>PILIH GAME</h2>
+      <p>Pilih game yang ingin kamu top up.</p>
+    </div>
+
+    <div class="game-grid">
+
+      <div class="game-card" onclick="selectGame('Mobile Legends')">
+        <div class="game-icon">ML</div>
+        <h3>Mobile Legends</h3>
+        <p>Diamond</p>
+        <button>TOP UP</button>
+      </div>
+
+      <div class="game-card" onclick="selectGame('Free Fire')">
+        <div class="game-icon">FF</div>
+        <h3>Free Fire</h3>
+        <p>Diamond</p>
+        <button>TOP UP</button>
+      </div>
+
+      <div class="game-card" onclick="selectGame('PUBG Mobile')">
+        <div class="game-icon">PUBG</div>
+        <h3>PUBG Mobile</h3>
+        <p>UC</p>
+        <button>TOP UP</button>
+      </div>
+
+      <div class="game-card" onclick="selectGame('Roblox')">
+        <div class="game-icon">RBX</div>
+        <h3>Roblox</h3>
+        <p>Robux</p>
+        <button>TOP UP</button>
+      </div>
+
+      <div class="game-card" onclick="selectGame('Valorant')">
+        <div class="game-icon">VAL</div>
+        <h3>Valorant</h3>
+        <p>VP</p>
+        <button>TOP UP</button>
+      </div>
+
+      <div class="game-card" onclick="selectGame('Honor of Kings')">
+        <div class="game-icon">HOK</div>
+        <h3>Honor of Kings</h3>
+        <p>Token</p>
+        <button>TOP UP</button>
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- TOP UP FORM -->
+  <section class="section topup-section">
+
+    <div class="section-header">
+      <small>ORDER</small>
+      <h2>TOP UP SEKARANG</h2>
+      <p>Masukkan data akun game kamu.</p>
+    </div>
+
+    <div class="topup-box">
+
+      <label>GAME</label>
+
+      <select id="gameSelect">
+        <option value="">Pilih Game</option>
+        <option>Mobile Legends</option>
+        <option>Free Fire</option>
+        <option>PUBG Mobile</option>
+        <option>Roblox</option>
+        <option>Valorant</option>
+        <option>Honor of Kings</option>
+      </select>
+
+
+      <label>USER ID</label>
+
+      <input
+        type="text"
+        id="userId"
+        placeholder="Masukkan User ID"
+      >
+
+
+      <label>SERVER ID</label>
+
+      <input
+        type="text"
+        id="serverId"
+        placeholder="Masukkan Server ID jika diperlukan"
+      >
+
+
+      <label>NOMINAL</label>
+
+      <div class="nominal-grid">
+
+        <button onclick="chooseNominal('50 Diamond')">
+          50 Diamond
+        </button>
+
+        <button onclick="chooseNominal('100 Diamond')">
+          100 Diamond
+        </button>
+
+        <button onclick="chooseNominal('200 Diamond')">
+          200 Diamond
+        </button>
+
+        <button onclick="chooseNominal('500 Diamond')">
+          500 Diamond
+        </button>
+
+        <button onclick="chooseNominal('1000 Diamond')">
+          1000 Diamond
+        </button>
+
+        <button onclick="chooseNominal('2000 Diamond')">
+          2000 Diamond
+        </button>
+
+      </div>
+
+
+      <label>WHATSAPP</label>
+
+      <input
+        type="tel"
+        id="phone"
+        placeholder="Contoh: 628123456789"
+      >
+
+
+      <button class="order-btn" onclick="orderNow()">
+        LANJUTKAN PESANAN →
+      </button>
+
+    </div>
+
+  </section>
+
+
+  <!-- PROMO -->
+  <section id="promo" class="section promo-section">
+
+    <div class="section-header">
+      <small>PROMO</small>
+      <h2>PROMO TERBARU</h2>
+    </div>
+
+    <div class="promo-grid">
+
+      <div class="promo-card">
+        <span>PROMO</span>
+        <h3>TOP UP HEMAT</h3>
+        <p>Dapatkan harga spesial untuk nominal tertentu.</p>
+      </div>
+
+      <div class="promo-card">
+        <span>HOT</span>
+        <h3>FLASH SALE</h3>
+        <p>Promo terbatas untuk pengguna PANOWZ TOPUP.</p>
+      </div>
+
+      <div class="promo-card">
+        <span>NEW</span>
+        <h3>GAME TERBARU</h3>
+        <p>Game baru akan segera tersedia.</p>
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- CARA BELI -->
+  <section id="cara" class="section">
+
+    <div class="section-header">
+      <small>SIMPLE</small>
+      <h2>CARA PEMBELIAN</h2>
+    </div>
+
+    <div class="steps">
+
+      <div class="step">
+        <strong>01</strong>
+        <h3>PILIH GAME</h3>
+        <p>Pilih game yang ingin kamu top up.</p>
+      </div>
+
+      <div class="step">
+        <strong>02</strong>
+        <h3>MASUKKAN ID</h3>
+        <p>Masukkan User ID dan Server ID.</p>
+      </div>
+
+      <div class="step">
+        <strong>03</strong>
+        <h3>PILIH NOMINAL</h3>
+        <p>Pilih jumlah top up yang kamu inginkan.</p>
+      </div>
+
+      <div class="step">
+        <strong>04</strong>
+        <h3>KONFIRMASI</h3>
+        <p>Hubungi admin untuk proses pesanan.</p>
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- CONTACT -->
+  <section id="contact" class="contact">
+
+    <div class="contact-box">
+
+      <small>NEED HELP?</small>
+
+      <h2>BUTUH BANTUAN?</h2>
+
+      <p>
+        Hubungi admin PANOWZ TOPUP melalui WhatsApp.
+      </p>
+
+      <a
+        href="https://wa.me/6285135080137"
+        target="_blank"
+        class="whatsapp-btn"
+      >
+        CHAT ADMIN WHATSAPP
+      </a>
+
+      <a
+        href="https://whatsapp.com/channel/0029VbBiv4184Om7mQvMJH3r"
+        target="_blank"
+        class="channel-btn"
+      >
+        FOLLOW SALURAN PANOWZ
+      </a>
+
+    </div>
+
+  </section>
+
+
+  <!-- FOOTER -->
+  <footer>
+
+    <div class="footer-logo">
+      PANOWZ<span>TOPUP</span>
+    </div>
+
+    <p>
+      TOP UP CEPAT • MUDAH • PRAKTIS
+    </p>
+
+    <div class="footer-links">
+      <a href="#home">Home</a>
+      <a href="#games">Game</a>
+      <a href="#promo">Promo</a>
+      <a href="#contact">WhatsApp</a>
+    </div>
+
+    <small>
+      © 2026 PANOWZ TOPUP. All Rights Reserved.
+    </small>
+
+  </footer>
+
+
+  <!-- FLOATING WHATSAPP -->
+  <a
+    href="https://wa.me/6285135080137"
+    target="_blank"
+    class="floating-wa"
+  >
+    WA
+  </a>
+
+
+  <script src="script.js"></script>
+
+</body>
+</html>
